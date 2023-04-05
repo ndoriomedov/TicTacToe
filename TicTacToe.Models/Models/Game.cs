@@ -72,7 +72,7 @@
 
     public void UpdateTimer(DateTime responseSendTime)
     {
-      _lastMoveDateTime = responseSendTime;
+      _lastMoveDateTime = responseSendTime.ToUniversalTime();
     }
 
     public char GetWinnerSymbol()
@@ -107,7 +107,7 @@
 
     private bool CheckTimer(DateTime requestRecieveTime)
     {
-      return (requestRecieveTime.ToUniversalTime() - _lastMoveDateTime).TotalSeconds > MoveTimeConstraintInSeconds;
+      return (requestRecieveTime.ToUniversalTime() - _lastMoveDateTime).TotalSeconds < MoveTimeConstraintInSeconds;
     }
 
     private bool UpdateBoard(int row, int column)

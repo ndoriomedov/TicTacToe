@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicTacToe.Data\TicTacToe.Data.csproj" />
+    <ProjectReference Include="..\TicTacToe.Mappers\TicTacToe.Mappers.csproj" />
+    <ProjectReference Include="..\TicTacToe.Models\TicTacToe.Models.csproj" />
+  </ItemGroup>
+
+</Project>
